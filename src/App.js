@@ -1,7 +1,11 @@
-import React from "react";
-import List from "./components/List";
 
-const employees = [
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import orderAlpha from "./components/orderAlpha";
+import List from "./components/List";
+// import Wrapper from "./components/Wrapper";
+
+var employees = [
   {
     id: 1,
     image: "http://www.placehold.it/150x150",
@@ -42,11 +46,29 @@ const employees = [
     email: "trisha.w@example.com",
     DOB: "05-10-1986"
   }
- 
+
 ];
 
+// function App() {
+//   return <List employees={employees} />;
+// }
+
+
+
+
 function App() {
-  return <List employees={employees} />;
+  document.title = "Wikipedia Searcher";
+  return (
+    <Router>
+      <div>
+        {/* <Wrapper> */}
+        <Route exact path="/" render={() => <List employees={employees} />} />
+        <Route exact path="/orderalpha" component={orderAlpha} />
+        {/* </Wrapper> */}
+      </div>
+    </Router>
+  );
 }
+
 
 export default App;

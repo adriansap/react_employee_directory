@@ -1,5 +1,11 @@
 import React, { useState } from "react";
+// import _ from 'lodash';
+import orderAlpha from './orderAlpha'
 
+
+// function sayHello() {
+//   alert('Hello!');
+// }
 // Whenever we try to render an array containing JSX, React knows to render each JSX element separately
 function List(props) {
   const [queryValue, setValue] = useState('') //until setValue sets a value, queryValue = ''
@@ -16,7 +22,7 @@ function List(props) {
           <tr>
             <th scope="col">#</th>
             <th scope="col">Image</th>
-            <th scope="col">Name</th>
+            <th scope="col" onClick={orderAlpha}>Name</th>
             <th scope="col">Phone</th>
             <th scope="col">Email</th>
             <th scope="col">DOB</th>
