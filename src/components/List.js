@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import _ from 'lodash';
-import orderAlpha from './orderAlpha'
+import Orderalpha from './Orderalpha'
 
 
 // function sayHello() {
@@ -22,7 +22,7 @@ function List(props) {
           <tr>
             <th scope="col">#</th>
             <th scope="col">Image</th>
-            <th scope="col" onClick={orderAlpha}>Name</th>
+            <th scope="col" onClick={Orderalpha}>Name</th>
             <th scope="col">Phone</th>
             <th scope="col">Email</th>
             <th scope="col">DOB</th>

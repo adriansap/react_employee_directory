@@ -1,7 +1,7 @@
 
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import orderAlpha from "./components/orderAlpha";
+import Orderalpha from "./components/Orderalpha";
 import List from "./components/List";
 // import Wrapper from "./components/Wrapper";
 
@@ -63,7 +63,7 @@ function App() {
       <div>
         {/* <Wrapper> */}
         <Route exact path="/" render={() => <List employees={employees} />} />
-        <Route exact path="/orderalpha" component={orderAlpha} />
+        <Route exact path="/Orderalpha" render={() => <Orderalpha employees={employees} />} />
         {/* </Wrapper> */}
       </div>
     </Router>
