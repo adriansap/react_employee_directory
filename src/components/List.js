@@ -31,6 +31,7 @@ function List(props) {
             <tr>
               <th scope="row"></th>
               <td><img src={filteredName.image} alt="profilepic"></img></td>
+              <td>{filteredName.name}</td>
               <td>{filteredName.phone}</td>
               <td>{filteredName.email}</td>
               <td>{filteredName.DOB}</td>
