@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 // import _ from 'lodash';
-import Orderalpha from './Orderalpha'
+// import Orderalpha from './Orderalpha'
+import { Redirect } from 'react-router-dom'
+
 
 
 // function sayHello() {
@@ -22,7 +24,7 @@ function List(props) {
           <tr>
             <th scope="col">#</th>
             <th scope="col">Image</th>
-            <th scope="col" onClick={Orderalpha}>Name</th>
+            <th scope="col" onClick={<Redirect to='/Orderalpha'/>}>Name</th>
             <th scope="col">Phone</th>
             <th scope="col">Email</th>
             <th scope="col">DOB</th>
