@@ -33,17 +33,18 @@ function List(props) {
 
           <tr>
             <th scope="row">Pic</th>
-            {props.employees.filter(name => name.name.includes(queryValue)).map(filteredName => (
+            {props.employees.filter(name => name.name.toLowerCase().includes(queryValue)).map(filteredName => (
 
               <td>
-                <img src={filteredName.image}></img>
+                <img src={filteredName.image} alt="profilepic"></img>
               </td>
             ))}
           </tr>
 
           <tr>
             <th scope="row">Name</th>
-            {props.employees.filter(name => name.name.includes(queryValue)).map(filteredName => (
+            {props.employees.filter(name => name.name.toLowerCase().includes(queryValue)).map(filteredName => (
+
 
               <td>
                 {filteredName.name}
@@ -53,7 +54,7 @@ function List(props) {
 
           <tr>
             <th scope="row">Phone</th>
-            {props.employees.filter(name => name.name.includes(queryValue)).map(filteredName => (
+            {props.employees.filter(name => name.name.toLowerCase().includes(queryValue)).map(filteredName => (
 
               <td>
                 {filteredName.phone}
@@ -63,7 +64,7 @@ function List(props) {
 
           <tr>
             <th scope="row">Email</th>
-            {props.employees.filter(name => name.name.includes(queryValue)).map(filteredName => (
+            {props.employees.filter(name => name.name.toLowerCase().includes(queryValue)).map(filteredName => (
 
               <td>
                 {filteredName.email}
@@ -73,7 +74,7 @@ function List(props) {
 
           <tr>
             <th scope="row">DOB</th>
-            {props.employees.filter(name => name.name.includes(queryValue)).map(filteredName => (
+            {props.employees.filter(name => name.name.toLowerCase().includes(queryValue)).map(filteredName => (
 
               <td>
                 {filteredName.DOB}
