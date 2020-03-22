@@ -1,10 +1,11 @@
 import React from "react";
-
 // Whenever we try to render an array containing JSX, React knows to render each JSX element separately
 function List(props) {
+  console.log("props.employees.name" + props.employees)
+
   return (
-<div class="md-form active-pink active-pink-2 mb-3 mt-0">
-  <input class="form-control" type="text" placeholder="Search" aria-label="Search"></input>
+    <div class="md-form active-pink active-pink-2 mb-3 mt-0">
+      <input class="form-control" type="text" placeholder="Search" aria-label="Search"></input>
 
       <table class="table">
         <thead>
@@ -19,24 +20,20 @@ function List(props) {
           </tr>
         </thead>
         <tbody>
-          {props.employees.map(index => (
-
-            <tr>
-              <th scope="row">{index.id}</th>
-              <td><img src={index.image} /></td>
-              <td>{index.name}</td>
-              <td>{index.phone}</td>
-              <td>{index.email}</td>
-              <td>{index.DOB}</td>
-
-            </tr>
-          ))}
+          <div>
+            {props.employees.filter(name => name.name.includes('s')).map(filteredName => (
+              <li>
+                {filteredName.name}
+              </li>
+            ))}
+          </div>
         </tbody>
       </table>
-      </div>
+    </div>
   );
 }
 
 export default List;
+
 
 
