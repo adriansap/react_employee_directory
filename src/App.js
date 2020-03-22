@@ -11,7 +11,7 @@ const employees = [
     DOB: "01-19-1986"
   },
   {
-    id: 1,
+    id: 2,
     image: "http://placehold.it/150x150",
     name: "Patty Smith",
     phone: "(839)-127-3333",
@@ -19,7 +19,7 @@ const employees = [
     DOB: "02-20-1986"
   },
   {
-    id: 1,
+    id: 3,
     image: "http://placehold.it/150x150",
     name: "Ursula Gomez",
     phone: "(839)-444-4833",
@@ -27,7 +27,7 @@ const employees = [
     DOB: "03-21-1986"
   },
   {
-    id: 1,
+    id: 4,
     image: "http://placehold.it/150x150",
     name: "Joan Petty",
     phone: "(839)-417-2833",
@@ -35,7 +35,7 @@ const employees = [
     DOB: "04-22-1986"
   },
   {
-    id: 1,
+    id: 5,
     image: "http://placehold.it/150x150",
     name: "Trisha Wall",
     phone: "(839)-797-0833",
