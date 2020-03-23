@@ -14,11 +14,7 @@ function Orderalpha(props) {
     let sortedByName = _.sortBy(props.employees, 'name')
     return <div>
         <h1>Employee Directory</h1>
-        <Link to="/" className={window.location.pathname === "/"
-            ? "nav-link active"
-            : "nav-link"
-        }
-        >
+        <Link to="/">
         <input  class="form-control" type="text" placeholder="Search" aria-label="Search"></input>
         </Link>
         <table class="table">
@@ -36,7 +32,7 @@ function Orderalpha(props) {
             <tbody>
 
 
-                {props.employees.filter(name => name.name.toLowerCase()).map(filteredName => (
+                {
                     sortedByName.map(record =>
                         <tr>
                             <th scope="row"></th>
@@ -47,7 +43,7 @@ function Orderalpha(props) {
                             <td>{record.DOB}</td>
                         </tr>
                     )
-                ))}
+                }
 
 
 
