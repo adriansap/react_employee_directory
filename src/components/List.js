@@ -2,12 +2,11 @@ import React, { useState } from "react";
 // import _ from 'lodash';
 // import Orderalpha from './Orderalpha'
 import { Redirect } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 
 
-// function sayHello() {
-//   alert('Hello!');
-// }
+
 // Whenever we try to render an array containing JSX, React knows to render each JSX element separately
 function List(props) {
   const [queryValue, setValue] = useState('') //until setValue sets a value, queryValue = ''
@@ -19,12 +18,21 @@ function List(props) {
       <h1>Employee Directory</h1>
       <input onChange={event => setValue(event.target.value)} class="form-control" type="text" placeholder="Search" aria-label="Search"></input>
 
+  
+
+
       <table class="table">
         <thead>
           <tr>
             <th scope="col">#</th>
             <th scope="col">Image</th>
-            <th scope="col" onClick={<Redirect to='/Orderalpha'/>}>Name</th>
+            <Link to="/Orderalpha" className={window.location.pathname === "/"
+              ? "nav-link active"
+              : "nav-link"
+            }
+            >
+              <th scope="col">Name</th>
+            </Link>
             <th scope="col">Phone</th>
             <th scope="col">Email</th>
             <th scope="col">DOB</th>
@@ -49,7 +57,7 @@ function List(props) {
 
         </tbody>
       </table>
-    </div>
+    </div >
   );
 }
 

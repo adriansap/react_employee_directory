@@ -1,5 +1,7 @@
 import _ from 'lodash';
 import React, { useState } from "react";
+// import { Redirect } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 
 function Orderalpha(props) {
@@ -11,13 +13,14 @@ function Orderalpha(props) {
 
     let sortedByName = _.sortBy(props.employees, 'name')
     return <div>
-        <h1>Test Sorting React</h1>
-        <ul>
-
-        </ul>
         <h1>Employee Directory</h1>
-        <input onChange={event => setValue(event.target.value)} class="form-control" type="text" placeholder="Search" aria-label="Search"></input>
-
+        <Link to="/" className={window.location.pathname === "/"
+            ? "nav-link active"
+            : "nav-link"
+        }
+        >
+        <input  class="form-control" type="text" placeholder="Search" aria-label="Search"></input>
+        </Link>
         <table class="table">
             <thead>
                 <tr>
@@ -33,7 +36,7 @@ function Orderalpha(props) {
             <tbody>
 
 
-                {props.employees.filter(name => name.name.toLowerCase().includes(queryValue)).map(filteredName => (
+                {props.employees.filter(name => name.name.toLowerCase()).map(filteredName => (
                     sortedByName.map(record =>
                         <tr>
                             <th scope="row"></th>
@@ -50,7 +53,7 @@ function Orderalpha(props) {
 
             </tbody>
         </table>
-    </div>
+    </div >
 
 }
 
