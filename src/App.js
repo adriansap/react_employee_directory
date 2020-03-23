@@ -57,7 +57,7 @@ var employees = [
 
 
 function App() {
-  document.title = "Wikipedia Searcher";
+  document.title = "Employee Directory";
   return (
     <Router>
       <div>
