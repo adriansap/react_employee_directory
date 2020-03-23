@@ -26,11 +26,7 @@ function List(props) {
           <tr>
             <th scope="col">#</th>
             <th scope="col">Image</th>
-            <Link to="/Orderalpha" className={window.location.pathname === "/"
-              ? "nav-link active"
-              : "nav-link"
-            }
-            >
+            <Link to="/Orderalpha">
               <th scope="col">Name</th>
             </Link>
             <th scope="col">Phone</th>
