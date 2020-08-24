@@ -25,7 +25,7 @@ function Orderalpha(props) {
                     <th scope="col">Name</th>
                     <th scope="col">Phone</th>
                     <th scope="col">Email</th>
-                    <th scope="col">DOB</th>
+                    <th scope="col">Location</th>
 
                 </tr>
             </thead>

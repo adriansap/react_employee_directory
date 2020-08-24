@@ -11,14 +11,22 @@ import { Link } from "react-router-dom";
 function List(props) {
   const [queryValue, setValue] = useState('') //until setValue sets a value, queryValue = ''
 
+  // const thingy = { 1: '10', 2: '20', 3: '30', 4: '40' }
+  // const thingy2 = { a: '1', b: '2', 1: '100' }
+  // const thing = [...thingy, 6,7,8] // [10,20,30,40,6,7,8]
+  // console.log("fancy", { ...thingy2, ...thingy })
+  // const state = useState('')
+  // const queryValue = state[0];
+  // const setValue = state[1];
+
   console.log("props.employees[0].image" + props.employees[0].image)
 
   return (
     <div class="md-form active-pink active-pink-2 mb-3 mt-0">
-      <h1>Employee Directory</h1>
-      <input onChange={event => setValue(event.target.value)} class="form-control" type="text" placeholder="Search" aria-label="Search"></input>
+      <h1>Delivery Driver Directory</h1>
+      <input onChange={event => setValue(event.target.value)} class="form-control" type="text" placeholder="City, State or Zipcode" aria-label="Search"></input>
 
-  
+
 
 
       <table class="table">
@@ -31,14 +39,14 @@ function List(props) {
             </Link>
             <th scope="col">Phone</th>
             <th scope="col">Email</th>
-            <th scope="col">DOB</th>
+            <th scope="col">Location</th>
 
           </tr>
         </thead>
         <tbody>
 
 
-          {props.employees.filter(name => name.name.toLowerCase().includes(queryValue)).map(filteredName => (
+          {props.employees.filter(name => name.DOB.toLowerCase().includes(queryValue)).map(filteredName => (
 
             <tr>
               <th scope="row"></th>

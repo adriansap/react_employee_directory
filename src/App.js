@@ -4,50 +4,52 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Orderalpha from "./components/Orderalpha";
 import List from "./components/List";
 // import Wrapper from "./components/Wrapper";
+import Employees from "./employees";
+import Intro from "./components/Intro";
 
-var employees = [
-  {
-    id: 1,
-    image: "http://www.placehold.it/150x150",
-    name: "Suzy Gonzales",
-    phone: "(839)-497-9833",
-    email: "suzy.g@example.com",
-    DOB: "01-19-1986"
-  },
-  {
-    id: 2,
-    image: "http://placehold.it/150x150",
-    name: "Patty Smith",
-    phone: "(839)-127-3333",
-    email: "patty.s@example.com",
-    DOB: "02-20-1986"
-  },
-  {
-    id: 3,
-    image: "http://placehold.it/150x150",
-    name: "Ursula Gomez",
-    phone: "(839)-444-4833",
-    email: "ursula.g@example.com",
-    DOB: "03-21-1986"
-  },
-  {
-    id: 4,
-    image: "http://placehold.it/150x150",
-    name: "Joan Petty",
-    phone: "(839)-417-2833",
-    email: "joan.p@example.com",
-    DOB: "04-22-1986"
-  },
-  {
-    id: 5,
-    image: "http://placehold.it/150x150",
-    name: "Trisha Wall",
-    phone: "(839)-797-0833",
-    email: "trisha.w@example.com",
-    DOB: "05-10-1986"
-  }
+// var employees = [
+//   {
+//     id: 1,
+//     image: "http://www.placehold.it/150x150",
+//     name: "Suzy Gonzales",
+//     phone: "(839)-497-9833",
+//     email: "suzy.g@example.com",
+//     DOB: "01-19-1986"
+//   },
+//   {
+//     id: 2,
+//     image: "http://placehold.it/150x150",
+//     name: "Patty Smith",
+//     phone: "(839)-127-3333",
+//     email: "patty.s@example.com",
+//     DOB: "02-20-1986"
+//   },
+//   {
+//     id: 3,
+//     image: "http://placehold.it/150x150",
+//     name: "Ursula Gomez",
+//     phone: "(839)-444-4833",
+//     email: "ursula.g@example.com",
+//     DOB: "03-21-1986"
+//   },
+//   {
+//     id: 4,
+//     image: "http://placehold.it/150x150",
+//     name: "Joan Petty",
+//     phone: "(839)-417-2833",
+//     email: "joan.p@example.com",
+//     DOB: "04-22-1986"
+//   },
+//   {
+//     id: 5,
+//     image: "http://placehold.it/150x150",
+//     name: "Trisha Wall",
+//     phone: "(839)-797-0833",
+//     email: "trisha.w@example.com",
+//     DOB: "05-10-1986"
+//   }
 
-];
+// ];
 
 // function App() {
 //   return <List employees={employees} />;
@@ -57,13 +59,15 @@ var employees = [
 
 
 function App() {
+  console.log("sc",Employees)
   document.title = "Employee Directory";
   return (
     <Router>
       <div>
         {/* <Wrapper> */}
-        <Route exact path="/" render={() => <List employees={employees} />} />
-        <Route exact path="/Orderalpha" render={() => <Orderalpha employees={employees} />} />
+        <Route exact path="/" render={() => <Intro employees={Employees} />} />
+        <Route exact path="/Orderalpha" render={() => <Orderalpha employees={Employees} />} />
+        <Route exact path="/List" render={() => <List employees={Employees} />} />
         {/* </Wrapper> */}
       </div>
     </Router>
